@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whether Now - Modern Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <main class="app" id="app">
+      <header class="hero">
+        <p class="label">Whether Website</p>
+        <h1>Weather, but make it aesthetic.</h1>
+        <p class="subtitle">
+          Enter your place, hit search, and get live weather with a clean modern
+          experience.
+        </p>
+      </header>
+
+      <section class="search-panel">
+        <div class="input-wrap">
+          <label for="cityInput">Enter Place</label>
+          <input
+            id="cityInput"
+            type="text"
+            placeholder="e.g. Mumbai, London, Tokyo"
+            autocomplete="off"
+          />
+        </div>
+        <button id="searchBtn" type="button">Search Weather</button>
+      </section>
+
+      <section id="status" class="status">Ready. Add city and search.</section>
+
+      <section id="weatherCard" class="weather-card hidden">
+        <div class="primary">
+          <p id="location" class="location">--</p>
+          <div class="temp-row">
+            <p id="temperature" class="temperature">--°C</p>
+            <img id="icon" alt="Weather icon" />
+          </div>
+          <p id="condition" class="condition">--</p>
+        </div>
+
+        <div class="secondary">
+          <article class="metric">
+            <p>Feels Like</p>
+            <strong id="feelsLike">--°C</strong>
+          </article>
+          <article class="metric">
+            <p>Humidity</p>
+            <strong id="humidity">--%</strong>
+          </article>
+          <article class="metric">
+            <p>Wind</p>
+            <strong id="wind">-- m/s</strong>
+          </article>
+          <article class="metric">
+            <p>Pressure</p>
+            <strong id="pressure">-- hPa</strong>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
