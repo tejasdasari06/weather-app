@@ -6,6 +6,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "City is required" });
   }
 
+  
   // Get API key from Vercel environment variables
   const apiKey = process.env.OPENWEATHER_API_KEY;
 

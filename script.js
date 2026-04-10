@@ -16,6 +16,7 @@ const windEl = document.getElementById("wind");
 const pressureEl = document.getElementById("pressure");
 const loader = document.getElementById("loader");
 
+
 function showLoader() {
   loader.classList.remove("hidden");
 }
