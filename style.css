@@ -24,7 +24,8 @@ body {
   background: radial-gradient(circle at top left, #13203f 0%, var(--bg-dark) 45%);
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .ambient {
@@ -73,8 +74,6 @@ body {
   z-index: 1;
   max-height: 90dvh;
   overflow-y: auto;
-  margin: 20px auto;
-  width: min(900px, 92vw);
 }
 
 .hero h1 {
@@ -300,14 +299,6 @@ button:active {
     grid-template-columns: 1fr;
   }
 
-  .header h1 {
-    font-size: 1.2rem;
-  }
-
-  .search-section {
-    padding: 15px;
-  }
-
   button {
     height: 44px;
   }
@@ -332,30 +323,3 @@ button:active {
 html {
   scroll-behavior: smooth;
 }
-
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 16px 20px;
-  background: rgba(10, 15, 30, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  z-index: 1000;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 1.4rem;
-  color: #67e8f9;
-}
-
-.search-section {
-  margin-top: 80px; /* space for fixed header */
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-
