@@ -14,6 +14,15 @@ const feelsLikeEl = document.getElementById("feelsLike");
 const humidityEl = document.getElementById("humidity");
 const windEl = document.getElementById("wind");
 const pressureEl = document.getElementById("pressure");
+const loader = document.getElementById("loader");
+
+function showLoader() {
+  loader.classList.remove("hidden");
+}
+
+function hideLoader() {
+  loader.classList.add("hidden");
+}
 
 function setStatus(message, type = "") {
   statusEl.textContent = message;
@@ -51,10 +60,12 @@ function showWeather(data) {
 
 async function fetchWeather(city) {
   setStatus("Fetching weather...", "success");
+  showLoader();
 
   try {
     const response = await fetch(`/api/weather?city=${encodeURIComponent(city)}`);
     const data = await response.json();
+    hideLoader();
 
     if (!response.ok) {
       throw new Error(data.error || "Could not fetch weather.");
@@ -63,6 +74,7 @@ async function fetchWeather(city) {
     showWeather(data);
     setStatus("Weather updated successfully.", "success");
   } catch (error) {
+    hideLoader();
     weatherCardEl.classList.add("hidden");
     setStatus(`Error: ${error.message}`, "error");
   }
