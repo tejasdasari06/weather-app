@@ -7,6 +7,7 @@ A modern weather web app that fetches and displays real-time weather data based 
 3.Backend securely calls weather API
 4.Data is returned and displayed on the UI
 
+
 -> Tech Stack
 HTML
 CSS
